@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@300&family=Crimson+Text&family=Dancing+Script:wght@400;600&family=Fanwood+Text:ital@0;1&family=M+PLUS+Rounded+1c:wght@500&family=Montserrat:wght@100;200;300;400&family=Orbitron:wght@400;500;600;900&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300&family=Roboto:wght@300;400;500;700;900&family=Sarala&display=swap");
+
+/* ////////////////////////////////////////////////////// */
+/* General Specs */
+* {
+  box-sizing: border-box;
+}
+
+h3 {
+  margin: 0;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+span {
+  font-size: 80%;
+  opacity: 0.6;
+}
+
+.spanX {
+  font-family: "Poppins", sans-serif;
+  opacity: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #000000;
+  color: white;
+  display: flex;
+}
+/* General Specs End */
+/* ///////////////////////////////////////////////////// */
+
+/* //////////////////////////////////////////////////// */
+/* NavBar specs */
+.nav-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 25px;
+  background-color: #000000;
+  /* border: 2px solid yellow; */
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  margin-right: 10%;
+  gap: 40px;
+  font-size: 100%;
+}
+
+.logo {
+  margin-left: 10%;
+  font-size: 120%;
+}
+
+.nav-item:last-child {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: rgb(206, 29, 6);
+  border: 2px solid rgb(206, 29, 6);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.nav-item:not(.nav-cta) {
+  transition: all 0.7s ease;
+  margin-top: 2px;
+}
+
+.nav-item:not(.nav-cta):hover {
+  transform: translateY(-20%);
+  transition: all 0.7s ease;
+}
+/* NavBar specs End */
+/* ///////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////////////////////////// */
+/* Intro text styles */
+.intro-text {
+  width: 50%;
+  opacity: 1;
+  transition: all 6s ease-out;
+  text-align: center;
+  z-index: -2;
+}
+
+.intro-hdl {
+  font-size: 250%;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo-hide {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+/* Intro text styles end */
+/* ////////////////////////////////////////////////////////////// */
+
+/* ///////////////////////////////////////////////////////////// */
+/* General section styles */
+.section {
+  position: absolute;
+  font-size: 150%;
+  width: 40%;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+  top: 30%;
+}
+
+.active {
+  pointer-events: all;
+  display: block;
+  opacity: 1;
+}
+/* General section end */
+/* ///////////////////////////////////////////////////////////// */
+
+/* //////////////////////////////////////////////////////////// */
+/* Work Section styles */
+#work {
+  display: flex;
+  flex-wrap: wrap;
+  width: 98%;
+}
+
+.work-desc {
+  text-align: left;
+  display: flex;
+  align-items: center;
+
+  gap: 50px;
+  width: 50%;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 50%;
+}
+
+.work-desc {
+  font-size: 100%;
+  width: 80%;
+}
+
+.credits {
+  font-size: 50%;
+  width: 40%;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.work-item {
+  width: 50%;
+  height: 350px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.work-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 1s ease;
+}
+
+.label {
+  font-family: "Poppins", sans-serif;
+  font-size: 70%;
+  z-index: 2;
+  position: absolute;
+  background-color: black;
+  width: 0;
+  transition: all 0.7s ease;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 30px;
+}
+
+.text-cnt {
+  width: 50%;
+}
+
+.label-text {
+}
+
+/* Work styles end */
+/* //////////////////////////////////////////////////////////// */
+
+#references {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  text-align: left;
+  font-size: 100%;
+  width: 70%;
+}
+
+.quote-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.quo-symbol {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.quote {
+  flex: 1;
+  font-weight: normal;
+}
+
+.name {
+  font-style: italic;
+  align-self: flex-start;
+  margin-left: 70px; /* Adjust this value as needed */
+  font-size: 90%;
+  font-family: "Poppins", sans-serif;
+  opacity: 0.4;
+}
+
+#about {
+  text-align: left;
+  font-size: 90%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.about-text {
+  font-weight: normal;
+  text-align: center;
+}
+
+.sub-about {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-text {
+  width: 50%;
+}
+
+.sub-cnt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: 50%;
+}
+
+.sub-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url(./IMG/leon.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* ///////////////////////////////////////////////////////////////////// */
+/* Work item images */
+.work-item:hover::before {
+  transform: scale(1.2);
+}
+
+#work1::before {
+  background-image: url(./IMG/Alko.jpg);
+}
+
+#work2::before {
+  background-image: url(./IMG/rexona_rytmus.png);
+}
+
+#work3::before {
+  background-image: url(./IMG/leon.jpg);
+}
+
+#work4::before {
+  background-image: url(./IMG/reif.jpg);
+}
+
+#work5::before {
+  background-image: url(./IMG/ACCENTURE.jpg);
+}
+
+#work6::before {
+  background-image: url(./IMG/Kofila.jpg);
+}
+
+#work7::before {
+  background-image: url(./IMG/CSOB.jpg);
+}
+
+#work8::before {
+  background-image: url(./IMG/Big.jpg);
+}
+
+#work9::before {
+  background-image: url(./IMG/tecka.png);
+}
+
+#work10::before {
+  background-image: url(./IMG/Skoda.jpg);
+}
+
+#work11::before {
+  background-image: url(./IMG/YL\ Menu.png.jpg);
+}
+#work12::before {
+  background-image: url(./IMG/YL\ STANDUP.png);
+}
+#work13::before {
+  background-image: url(./IMG/YL\ ATEMPT.png);
+}
+
+/* ///////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////// */
+/* Media Queries */
+@media only screen and (max-width: 550px) {
+  .nav-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    margin: 0;
+    opacity: 0;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .section {
+    width: 80%;
+    top: 5%;
+  }
+
+  #work {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .work-item {
+    width: 90%;
+    height: 200px;
+  }
+}
